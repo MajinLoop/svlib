@@ -1,0 +1,9 @@
+**/sim/build/
+**/sim_build/
+**/*.vcd
+**/*.fst
+**/*.log
+**/*.out
+**/*.vvp
+__pycache__/
+.vscode/
