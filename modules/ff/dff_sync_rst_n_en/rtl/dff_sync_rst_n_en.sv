@@ -7,7 +7,7 @@ module dff_sync_rst_n_en
     input logic clk,
     input logic sync_rst_n,
 
-    input logic en,
+    input logic enabler,
 
     input logic [WIDTH-1:0] data,
 
@@ -18,7 +18,7 @@ always_ff @(posedge clk)
 begin
     if(!sync_rst_n)
         q <= {WIDTH{1'b0}};
-    else if (en)
+    else if (enabler)
         q <= data;
 end
 

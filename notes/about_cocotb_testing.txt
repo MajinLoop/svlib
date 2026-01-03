@@ -1,0 +1,10 @@
+
+Prints
+    dut._log.info(f"q={int(dut.q.value)}")
+    dut._log.warning("something")
+    dut._log.error("failed")
+
+
+ReadOnly() te mete en una fase donde cocotb prohíbe writes hasta el siguiente timestep.
+NextTimeStep() es la forma correcta de “salir” para volver a escribir.
+Tu patrón ReadOnly → assert → NextTimeStep → escribir es correcto.

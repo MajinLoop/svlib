@@ -1,0 +1,12 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1767481450" />
+    <testcase name="test_store_min" classname="tb_dff_sync_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_sync_rst_n_en/tb/tb_dff_sync_rst_n_en.py" lineno="22" time="0.0008828639984130859" sim_time_ns="8.0" ratio_time="9061.4183094788" />
+    <testcase name="test_store_random" classname="tb_dff_sync_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_sync_rst_n_en/tb/tb_dff_sync_rst_n_en.py" lineno="71" time="0.0003123283386230469" sim_time_ns="6.0" ratio_time="19210.552671755726" />
+    <testcase name="test_store_max" classname="tb_dff_sync_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_sync_rst_n_en/tb/tb_dff_sync_rst_n_en.py" lineno="102" time="0.0002484321594238281" sim_time_ns="5.999999999999998" ratio_time="24151.46257197696" />
+    <testcase name="test_sync_reset" classname="tb_dff_sync_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_sync_rst_n_en/tb/tb_dff_sync_rst_n_en.py" lineno="132" time="0.00023889541625976562" sim_time_ns="6.0" ratio_time="25115.59281437126" />
+    <testcase name="rewrite" classname="tb_dff_sync_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_sync_rst_n_en/tb/tb_dff_sync_rst_n_en.py" lineno="163" time="0.0002129077911376953" sim_time_ns="5.9999999999999964" ratio_time="28181.21388577826" />
+    <testcase name="store_while_rst" classname="tb_dff_sync_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_sync_rst_n_en/tb/tb_dff_sync_rst_n_en.py" lineno="189" time="0.00020503997802734375" sim_time_ns="6.0" ratio_time="29262.586046511628" />
+    <testcase name="store_in_negedge" classname="tb_dff_sync_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_sync_rst_n_en/tb/tb_dff_sync_rst_n_en.py" lineno="216" time="0.0001761913299560547" sim_time_ns="4.0" ratio_time="22702.592692828148" />
+  </testsuite>
+</testsuites>

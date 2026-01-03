@@ -1,0 +1,13 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1767407542" />
+    <testcase name="store_min" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="10" time="0.0003745555877685547" sim_time_ns="4.001" ratio_time="10681.992555060471" />
+    <testcase name="store_random" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="30" time="0.00017189979553222656" sim_time_ns="4.001" ratio_time="23275.187661581138" />
+    <testcase name="store_max" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="50" time="0.00014638900756835938" sim_time_ns="4.001000000000001" ratio_time="27331.287140065157" />
+    <testcase name="fall_reset" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="70" time="0.000209808349609375" sim_time_ns="5.001000000000001" ratio_time="23836.038981818187" />
+    <testcase name="rise_reset" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="96" time="0.0001952648162841797" sim_time_ns="6.001000000000001" ratio_time="30732.623081807087" />
+    <testcase name="rewrite" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="123" time="0.00018358230590820312" sim_time_ns="6.000999999999998" ratio_time="32688.335459740247" />
+    <testcase name="store_while_rst" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="148" time="0.0001926422119140625" sim_time_ns="6.000999999999998" ratio_time="31151.012752475235" />
+    <testcase name="store_in_negedge" classname="tb_dff_async_rst_n" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n/tb/tb_dff_async_rst_n.py" lineno="175" time="0.00013494491577148438" sim_time_ns="3.0009999999999977" ratio_time="22238.70371731447" />
+  </testsuite>
+</testsuites>

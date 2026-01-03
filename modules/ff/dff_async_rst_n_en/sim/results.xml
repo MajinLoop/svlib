@@ -1,0 +1,14 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1767409922" />
+    <testcase name="store_min" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="10" time="0.0006201267242431641" sim_time_ns="6.001" ratio_time="9677.054326797386" />
+    <testcase name="store_random" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="38" time="0.0003573894500732422" sim_time_ns="6.001" ratio_time="16791.206340226818" />
+    <testcase name="store_max" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="66" time="0.00022077560424804688" sim_time_ns="6.0009999999999994" ratio_time="27181.44525269978" />
+    <testcase name="retain_value" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="93" time="0.0002148151397705078" sim_time_ns="6.001000000000001" ratio_time="27935.64739622642" />
+    <testcase name="fall_reset" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="122" time="0.00020956993103027344" sim_time_ns="5.001000000000001" ratio_time="23863.156204778163" />
+    <testcase name="rise_reset" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="150" time="0.00020551681518554688" sim_time_ns="6.001000000000001" ratio_time="29199.557197215785" />
+    <testcase name="rewrite" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="178" time="0.000213623046875" sim_time_ns="6.000999999999998" ratio_time="28091.538285714276" />
+    <testcase name="enabled_but_reseting" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="206" time="0.0002598762512207031" sim_time_ns="6.000999999999998" ratio_time="23091.759911926598" />
+    <testcase name="store_in_negedge" classname="tb_dff_async_rst_n_en" file="/home/aleja/LDR/work/WH/svlib/modules/ff/dff_async_rst_n_en/tb/tb_dff_async_rst_n_en.py" lineno="233" time="0.000225067138671875" sim_time_ns="5.001000000000005" ratio_time="22220.03633898307" />
+  </testsuite>
+</testsuites>
