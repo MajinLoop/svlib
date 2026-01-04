@@ -1,10 +1,10 @@
 // CHANNELS_COUNT must be >= 2
 // CHANNELS_WIDTH must be >= 1
 // select signal is ceil(log2(CHANNELS_COUNT)) bits wide
-module multiplexer_mxn
+module mux_generic
 #(
-    parameter int unsigned CHANNELS_COUNT = 5,
-    parameter int unsigned CHANNELS_WIDTH = 4
+    parameter int unsigned CHANNELS_COUNT = 4,
+    parameter int unsigned CHANNELS_WIDTH = 8
 )
 (
 	input logic [$clog2(CHANNELS_COUNT)-1:0] select,
