@@ -31,4 +31,4 @@ async def test_select_channel(dut): # Test selecting channels
     for i in range(channels_count):
         dut.select.value = i
         await Timer(1, "ps")
-        assert int(dut.selected_channel.value) == channels[i]
+        assert int(dut.channel_out.value) == channels[i]

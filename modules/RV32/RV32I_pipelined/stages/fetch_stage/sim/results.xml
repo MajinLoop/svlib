@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1767496980" />
+    <testcase name="test_PC_counting_manually" classname="tb_fetch_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/fetch_stage/tb/tb_fetch_stage.py" lineno="57" time="0.0006363391876220703" sim_time_ns="8.0" ratio_time="12571.911577369801" />
+    <testcase name="test_PC_counting" classname="tb_fetch_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/fetch_stage/tb/tb_fetch_stage.py" lineno="83" time="0.001329183578491211" sim_time_ns="68.0" ratio_time="51159.223677130045" />
+    <testcase name="test_PC_source_E_selects_PC_plus_4_E" classname="tb_fetch_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/fetch_stage/tb/tb_fetch_stage.py" lineno="103" time="0.0003101825714111328" sim_time_ns="10.0" ratio_time="32239.077632590313" />
+    <testcase name="test_PC_source_E_selects_ALU_result_E" classname="tb_fetch_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/fetch_stage/tb/tb_fetch_stage.py" lineno="135" time="0.0004775524139404297" sim_time_ns="10.0" ratio_time="20940.10983524713" />
+    <testcase name="test_PC_source_E_selects_fixed_zero" classname="tb_fetch_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/fetch_stage/tb/tb_fetch_stage.py" lineno="167" time="0.0005030632019042969" sim_time_ns="10.0" ratio_time="19878.218009478675" />
+    <testcase name="test_mux_predictor" classname="tb_fetch_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/fetch_stage/tb/tb_fetch_stage.py" lineno="199" time="0.0005314350128173828" sim_time_ns="10.0" ratio_time="18816.97622252131" />
+  </testsuite>
+</testsuites>

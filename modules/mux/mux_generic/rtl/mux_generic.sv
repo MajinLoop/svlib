@@ -10,7 +10,7 @@ module mux_generic
 	input logic [$clog2(CHANNELS_COUNT)-1:0] select,
 	input logic [CHANNELS_COUNT-1:0][CHANNELS_WIDTH-1:0] channels,
 	
-	output logic [CHANNELS_WIDTH-1:0] selected_channel
+	output logic [CHANNELS_WIDTH-1:0] channel_out
 );
 
 initial begin
@@ -22,11 +22,11 @@ always_comb begin
     int unsigned sel;
     sel = select;
     if (sel < CHANNELS_COUNT) begin
-        selected_channel = channels[sel];
+        channel_out = channels[sel];
     end
     else begin
-        selected_channel = '0;
-        // selected_channel = 'x; // alternatively if you want out-of-range to be loud in sim
+        channel_out = '0;
+        // channel_out = 'x; // alternatively if you want out-of-range to be loud in sim
     end
 end
 

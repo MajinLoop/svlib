@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1767486092" />
-    <testcase name="test_select_channel" classname="tb_mux_generic" file="/home/aleja/LDR/work/WH/svlib/modules/mux/tb/tb_mux_generic.py" lineno="22" time="0.00033473968505859375" sim_time_ns="0.004" ratio_time="11.949584045584047" />
+    <property name="random_seed" value="1767486487" />
+    <testcase name="test_select_channel" classname="tb_mux_generic" file="/home/aleja/LDR/work/WH/svlib/modules/mux/mux_generic/tb/tb_mux_generic.py" lineno="22" time="0.0003070831298828125" sim_time_ns="0.004" ratio_time="13.025788819875777" />
   </testsuite>
 </testsuites>

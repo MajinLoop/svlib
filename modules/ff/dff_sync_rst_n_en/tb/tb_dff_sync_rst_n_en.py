@@ -8,8 +8,7 @@ random.seed(SEED)
 
 
 # Helpers
-# Helper to perform a synchronous reset
-async def sync_reset(dut):
+async def sync_reset(dut): # Helper to perform a synchronous reset
     dut.sync_rst_n.value = 0
     await RisingEdge(dut.clk)
     await ReadOnly()
