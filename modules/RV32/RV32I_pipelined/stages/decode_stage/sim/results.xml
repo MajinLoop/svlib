@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1767583099" />
+    <testcase name="test" classname="tb_decode_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/decode_stage/tb/tb_decode_stage.py" lineno="10" time="0.00012135505676269531" sim_time_ns="0.0" ratio_time="0.0" />
+  </testsuite>
+</testsuites>

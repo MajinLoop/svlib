@@ -1,6 +1,7 @@
 module regfile
 #(
-    parameter WIDTH = 32
+    parameter int unsigned DATA_WIDTH = 32,
+    parameter int unsigned ADDR_WIDTH = 5
 )
 (
     // Secuential input signals
@@ -9,30 +10,36 @@ module regfile
 
     // Write ports
     input logic write_enable,
-    input logic [4:0] write_addr,
-    input logic [WIDTH-1:0] write_data,
+    input logic [ADDR_WIDTH-1:0] write_addr,
+    input logic [DATA_WIDTH-1:0] write_data,
 
     // Read ports
-    input logic [4:0] operand_1_addr,
-    input logic [4:0] operand_2_addr,
+    input logic [ADDR_WIDTH-1:0] operand_1_addr,
+    input logic [ADDR_WIDTH-1:0] operand_2_addr,
 
-    output logic [WIDTH-1:0] operand_1_data,
-    output logic [WIDTH-1:0] operand_2_data
+    output logic [DATA_WIDTH-1:0] operand_1,
+    output logic [DATA_WIDTH-1:0] operand_2
 );
 
-logic [30:0][WIDTH-1:0] rf;
+localparam int unsigned POSSIBLE_REG_COUNT = 2**ADDR_WIDTH;
+localparam int unsigned REAL_REG_COUNT = POSSIBLE_REG_COUNT - 1; // Register x0 is hardwired to 0
 
-always_ff @(negedge clk or posedge async_rst_n) begin
-    if (!async_rst_n) begin
-        rf <= '{default: '0};
+logic [REAL_REG_COUNT-1:0][DATA_WIDTH-1:0] rf;
+
+always_ff @(negedge clk or negedge async_rst_n) begin
+    if (!async_rst_n)begin
+        // rf <= '{default: '0}; // Icarus no le sabe a eso
+        for (i = 0; i < REAL_REG_COUNT; i = i + 1) begin
+            rf[i] <= '0;
+        end
     end
     else begin
-        if (write_enable && (write_addr != 0)) begin
-            rf[write_addr] <= write_data;
+        if (write_enable && (write_addr != '0)) begin
+            rf[write_addr - 1] <= write_data;
         end
     end
 end
-assign operand_1_data = (operand_1_addr != 0) ? rf[operand_1_addr] : '0;
-assign operand_2_data = (operand_2_addr != 0) ? rf[operand_2_addr] : '0;
+assign operand_1 = (operand_1_addr != '0) ? rf[operand_1_addr - 1] : '0;
+assign operand_2 = (operand_2_addr != '0) ? rf[operand_2_addr - 1] : '0;
 
 endmodule

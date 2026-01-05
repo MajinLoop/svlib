@@ -8,3 +8,18 @@ Prints
 ReadOnly() te mete en una fase donde cocotb prohíbe writes hasta el siguiente timestep.
 NextTimeStep() es la forma correcta de “salir” para volver a escribir.
 Tu patrón ReadOnly → assert → NextTimeStep → escribir es correcto.
+
+
+1) Usa '0 en vez de 0 para comparar direcciones
+No es obligatorio, pero evita warnings de tamaño/signo y es más idiomático.
+
+
+unique case
+Es un case con contrato, le estás prometiendo al compilador que exactamente una rama debe ser verdadera.
+Solo una de estas condiciones puede cumplirse.
+Nunca más de una a la vez.
+Si ninguna se cumple → eso es un bug (o va al default).
+
+
+{N{X}} → replica X N veces
+{ A, B } → concatena A seguido de B
