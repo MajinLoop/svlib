@@ -3,43 +3,68 @@ package rv32i_types_pkg;
 // --- Mux selects / control enums ---
 
 
+// Execute
 typedef enum logic
 {
-    OPERAND_1   = 1'd0,
-    PC          = 1'd1
-} mux_ALU_operand_A_options_t;
+    MUX_ALU_OPERAND_A_RS1,
+    MUX_ALU_OPERAND_A_PC
+} mux_ALU_operand_A_enum;
 
 typedef enum logic
 {
-    OPERAND_2   = 1'd0,
-    IMMEDIATE   = 1'd1
-} mux_ALU_operand_B_options_t;
+    MUX_ALU_OPERAND_B_RS2,
+    MUX_ALU_OPERAND_B_IMMEDIATE
+} mux_ALU_operand_B_enum;
 
-typedef enum logic [1:0]
+typedef enum logic [2:0]
 {
-    ALU         = 2'd0,
-    MEMORY      = 2'd1,
-    PC_PLUS_4   = 2'd2,
-    NONE        = 2'd3
-} mux_writeback_options_t;
+    COND_EQUALS,
+    COND_NOT_EQUALS,
+    COND_LOWER,
+    COND_GREATER_OR_EQUAL,
+    COND_LOWER_UNSIGNED,
+    COND_GREATER_OR_EQUAL_UNSIGNED,
+    COND_NONE
+} cond_code_enum;
+
 
 typedef enum logic [3:0]
 {
-    ADD,
-    SUB,
-    XOR,
-    OR,
-    AND,
-    SLL,
-    SRL,
-    SRA,
-    SLT,
-    SLTU,
-    A,
-    B,
-    NONE
-} ALU_op_options_t;
+    ALU_ADD,
+    ALU_SUB,
+    ALU_XOR,
+    ALU_OR,
+    ALU_AND,
+    ALU_SLL,
+    ALU_SRL,
+    ALU_SRA,
+    ALU_SLT,
+    ALU_SLTU,
+    ALU_OPERAND_A,
+    ALU_OPERAND_B,
+    ALU_NONE
+} ALU_op_enum;
 
+
+// Memory
+typedef enum logic [2:0]
+{
+    WT_BYTE,               // Less significant Byte
+    WT_HALF_WORD,          // Fisrt half
+    WT_WORD,               // 
+    WT_BYTE_UNSIGNED,      // Less significant Byte
+    WT_HALF_WORD_UNSIGNED  // Fisrt half
+} width_type_enum;
+
+
+// Writeback
+typedef enum logic [1:0]
+{
+    MUX_WB_ALU,
+    MUX_WB_MEMORY,
+    MUX_WB_PC_PLUS_4,
+    MUX_WB_NONE
+} mux_writeback_enum;
 
 
 endpackage

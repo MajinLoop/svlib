@@ -14,11 +14,11 @@ module regfile
     input logic [DATA_WIDTH-1:0] write_data,
 
     // Read ports
-    input logic [ADDR_WIDTH-1:0] operand_1_addr,
-    input logic [ADDR_WIDTH-1:0] operand_2_addr,
+    input logic [ADDR_WIDTH-1:0] rs1_addr,
+    input logic [ADDR_WIDTH-1:0] rs2_addr,
 
-    output logic [DATA_WIDTH-1:0] operand_1,
-    output logic [DATA_WIDTH-1:0] operand_2
+    output logic [DATA_WIDTH-1:0] rs1_data,
+    output logic [DATA_WIDTH-1:0] rs2_data
 );
 
 localparam int unsigned POSSIBLE_REG_COUNT = 2**ADDR_WIDTH;
@@ -26,6 +26,7 @@ localparam int unsigned REAL_REG_COUNT = POSSIBLE_REG_COUNT - 1; // Register x0 
 
 logic [REAL_REG_COUNT-1:0][DATA_WIDTH-1:0] rf;
 
+integer i;
 always_ff @(negedge clk or negedge async_rst_n) begin
     if (!async_rst_n)begin
         // rf <= '{default: '0}; // Icarus no le sabe a eso
@@ -39,7 +40,7 @@ always_ff @(negedge clk or negedge async_rst_n) begin
         end
     end
 end
-assign operand_1 = (operand_1_addr != '0) ? rf[operand_1_addr - 1] : '0;
-assign operand_2 = (operand_2_addr != '0) ? rf[operand_2_addr - 1] : '0;
+assign rs1_data = (rs1_addr != '0) ? rf[rs1_addr - 1] : '0;
+assign rs2_data = (rs2_addr != '0) ? rf[rs2_addr - 1] : '0;
 
 endmodule
