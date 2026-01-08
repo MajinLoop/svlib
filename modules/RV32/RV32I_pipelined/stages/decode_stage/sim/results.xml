@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1767781667" />
-    <testcase name="test" classname="tb_decode_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/decode_stage/tb/tb_decode_stage.py" lineno="10" time="0.00010061264038085938" sim_time_ns="0.0" ratio_time="0.0" />
+    <property name="random_seed" value="1767815297" />
+    <testcase name="test" classname="tb_decode_stage" file="/home/aleja/LDR/work/WH/svlib/modules/RV32/RV32I_pipelined/stages/decode_stage/tb/tb_decode_stage.py" lineno="10" time="0.00014281272888183594" sim_time_ns="0.0" ratio_time="0.0" />
   </testsuite>
 </testsuites>
