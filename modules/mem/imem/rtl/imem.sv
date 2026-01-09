@@ -1,5 +1,5 @@
 // Modelo “1-cycle latency” con buffer ready/valid
-module imem_rv
+module imem
 #(
     parameter int ADDR_WIDTH = 32,
     parameter int DATA_WIDTH = 32,
@@ -27,9 +27,8 @@ module imem_rv
 
     initial $readmemh(MEMFILE, mem);
 
-
     logic [IDX_W-1:0] idx;
-    assign idx = pc[WORD_SHIFT + IDX_W - 1 : WORD_SHIFT];
+    assign idx = pc[WORD_SHIFT + IDX_W - 1 : WORD_SHIFT]; // word aligned
 
     assign pc_ready_out = (!instruction_valid_out) || (instruction_ready_in); // puedo aceptar request si mi output buffer está libre o se va a consumir
 
@@ -39,12 +38,11 @@ module imem_rv
             instruction_valid_out <= 1'b0;
         end
         else begin
-            // consume
+            // Send
             if (instruction_ready_in && instruction_valid_out) instruction_valid_out <= 1'b0;
-
-            // produce (solo si acepto request)
+            // Take
             if (pc_valid_in && pc_ready_out) begin
-                instruction <= mem[idx]; // word aligned
+                instruction <= mem[idx];
                 instruction_valid_out <= 1'b1;
             end
         end

@@ -9,7 +9,7 @@ module fetch_stage
 
     // Control input signals
     input logic [1:0] PC_source_E,
-    input logic enable_fetch_H,
+    input logic enable_fetch,
     input logic prediction_source_D,
 
     // Data input signals
@@ -53,7 +53,7 @@ module fetch_stage
     (
         .clk(clk),
         .async_rst_n(async_rst_n),
-        .enabler(enable_fetch_H),
+        .enabler(enable_fetch),
         .data(mux_PC_source_out),
         .q(reg_PC_out)
     );

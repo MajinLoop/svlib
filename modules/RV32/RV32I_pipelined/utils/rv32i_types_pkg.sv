@@ -91,7 +91,7 @@ typedef struct packed
     logic [DATA_WIDTH-1:0] instruction_F;
     logic [DATA_WIDTH-1:0] PC_F;
     logic [DATA_WIDTH-1:0] PC_plus_4_F;
-} FD_pipe_bus_t;
+} pipe_FD_bus_t;
 
 typedef struct packed
 {
