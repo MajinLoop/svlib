@@ -1,0 +1,25 @@
+* RV if for signal
+
+* if the module only sends the signal
+// Inputs
+    // Handshake signal
+        input logic signal_ready_in, // next_ready (El siguiente puede recibir)
+        // no signal_valid_in, // prev_valid (El anterior me puede dar)
+
+// Outputs
+    // Handshake signal
+        // no signal_ready_out, // current_ready (Puedo recibir)
+        output logic signal_valid_out, // current_valid (Puedo dar)
+
+* if the module only recieves the signal
+// Inputs
+    // Handshake signal
+        // input logic signal_ready_in, // next_ready (IMEM puede recibir PC)
+        input logic instruction_valid_in, // prev_valid (El anterior me puede dar)
+    // Data
+        input logic [DATA_WIDTH-1:0] instruction_F,
+
+// Outputs
+    // Handshake instruction
+        output logic instruction_ready_out, // current_ready (Puedo recibir)
+        // output logic pc_valid_out, // current_valid (Puedo dar)
